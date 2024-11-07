@@ -2,6 +2,10 @@
 
 ### Session 8 - Small C# Project
 
+Program Version:  24.11.01<br />
+Written by:  Neil Jamieson [Licence](#licence)<br />
+As Part Of:  Software Development - Object Oriented Programming
+
 ### Scenario: Library Management System
 You are tasked with developing a Library Management System that allows users to manage a collection of books in a small library. The system should enable users to add, update, delete, and view books in the library. This will require using an SQL database to store information about each book.
 
@@ -52,3 +56,15 @@ You are tasked with developing a Library Management System that allows users to 
 **Abstraction:** Abstract database-related code in DatabaseHandler so that students understand the separation of responsibilities.
 
 **Inheritance and Polymorphism:** Though optional, you could add a base class or interface for different types of items in the library (e.g., MediaItem with subclasses Book, Magazine, etc.) for students to explore these OOP principles.
+
+## Bugs & Issues
+Please let me know if there is any bugs or issues with this script.
+* Issues: <a href="https://github.com/Valikahn/Library-Management-System/issues">Via GitHub</a>
+
+## Licence
+Licensed under the GPLv3 License.
+Copyright (C) 2024 Neil Jamieson
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.<br /><br />
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.<br /><br />
+You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/gpl-3.0.en.html ">GNU General Public License</a>.<br />
