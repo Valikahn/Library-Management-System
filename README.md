@@ -14,7 +14,6 @@ You are tasked with developing a Library Management System that allows users to 
 2. Database:
 * Create an SQL database named LibraryDB.
 * Create a table named Books with the following columns:
-
 	* BookID (Primary Key, Integer, Auto-increment)
 Title (Text, not null)
 Author (Text, not null)
