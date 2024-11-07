@@ -6,12 +6,13 @@
 You are tasked with developing a Library Management System that allows users to manage a collection of books in a small library. The system should enable users to add, update, delete, and view books in the library. This will require using an SQL database to store information about each book.
 
 ### Requirements
-1.	Classes: Implement three main classes to model the system:
+
+	1.	Classes: Implement three main classes to model the system:
 * Book: Represents a book in the library.
 * Library: Manages a collection of Book objects and provides methods to add, update, delete, and view books.
 * DatabaseHandler: Handles interactions with the SQL database, including creating tables, connecting to the database, and executing SQL queries.
 
-2.	Database:
+	2.	Database:
 * Create an SQL database named LibraryDB.
 * Create a table named Books with the following columns:
 	* BookID (Primary Key, Integer, Auto-increment)
