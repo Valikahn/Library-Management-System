@@ -6,7 +6,8 @@ USE LibraryDB;
 CREATE TABLE IF NOT EXISTS Books (
     BookID INT AUTO_INCREMENT PRIMARY KEY,
     Title VARCHAR(255) NOT NULL,
-    Author VARCHAR(255) NOT NULL,
+    AuthorFirstName VARCHAR(50) NOT NULL,
+    AuthorLastName VARCHAR(50) NOT NULL,
     PublicationYear INT,
-    Genre VARCHAR(100)
+    Genre VARCHAR(50)
 );
