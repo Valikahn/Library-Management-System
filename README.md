@@ -1,6 +1,6 @@
 # Library Management System
 
-## Session 8 - Small C# Project
+### Session 8 - Small C# Project
 
 ### Scenario: Library Management System
 You are tasked with developing a Library Management System that allows users to manage a collection of books in a small library. The system should enable users to add, update, delete, and view books in the library. This will require using an SQL database to store information about each book.
