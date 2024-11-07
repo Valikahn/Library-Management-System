@@ -47,5 +47,7 @@ You are tasked with developing a Library Management System that allows users to 
 
 ### Additional Tips
 **Encapsulation:** Make each class responsible for specific tasks and ensure that the Library class only interacts with the DatabaseHandler for database operations.
+
 **Abstraction:** Abstract database-related code in DatabaseHandler so that students understand the separation of responsibilities.
+
 **Inheritance and Polymorphism:** Though optional, you could add a base class or interface for different types of items in the library (e.g., MediaItem with subclasses Book, Magazine, etc.) for students to explore these OOP principles.
