@@ -77,5 +77,5 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.<br />
 
 ## References
-<a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a> C# (CSharp) MySql.Data.MySqlClient MySqlException Examples
+<a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a> C# (CSharp) MySql.Data.MySqlClient MySqlException Examples<br />
 <a href="https://stackoverflow.com/questions/48478323/c-sharp-how-to-set-a-fix-field-width-using-string-interpolation" target="_blank">[2]</a> C# how to set a fix field width using string interpolation
