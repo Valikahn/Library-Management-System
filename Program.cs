@@ -26,11 +26,11 @@ namespace LibraryManagementSystem
                 //--------------------  DISPLAY THE MENU OPTIONS  --------------------//
                 Console.WriteLine("\n##--- WELCOME TO THE LIBRARY MANAGEMENT SYSTEM ---##");
                 Console.WriteLine("");
-                Console.WriteLine("1. ADD A NEW BOOK TO THE LIBRARY");
-                //Console.WriteLine("2. UPDATE BOOK DETAILS");
-                //Console.WriteLine("3. DELETE A BOOK");
-                //Console.WriteLine("4. VIEW ALL BOOKS");
-                //Console.WriteLine("5. SEARCH FOR A BOOK BY TITLE");
+                Console.WriteLine("1. [C] ADD A NEW BOOK TO THE LIBRARY");
+                Console.WriteLine("2. [R] VIEW ALL BOOKS");
+                //Console.WriteLine("3. [U] UPDATE BOOK DETAILS");
+                //Console.WriteLine("4. [D] DELETE A BOOK");
+                //Console.WriteLine("5. [S] SEARCH FOR A BOOK BY TITLE");
                 Console.WriteLine("0. EXIT");
                 Console.WriteLine("");
                 Console.Write("SELECT AN OPTION USING NUMERICAL VALUES: ");
@@ -43,13 +43,14 @@ namespace LibraryManagementSystem
                 switch (choice)
                 {
                     //--------------------  USER CHOOSES TO ADD A BOOK TO THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
-                    case "1":
+                    case "1" or "c" or "C":
                         Console.Clear();
                         Functions.AddBook(library);
                         break;
                     //--------------------  USER CHOOSES TO UPDATE A BOOK IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
-                    case "2":
+                    case "2" or "r" or "R":
                         Console.Clear();
+                        Functions.GetAllBooks(library);
                         break;
                     //--------------------  USER CHOOSES TO DELETE A BOOK FROM THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
                     case "3":

@@ -9,7 +9,7 @@
 
 ### Session 8 - Small C# Project
 
-Program Version:  24.11.02<br />
+Program Version:  24.11.03<br />
 Written by:  Neil Jamieson [Licence](#licence)<br />
 As Part Of:  Software Development - Object Oriented Programming
 
@@ -34,11 +34,11 @@ You are tasked with developing a Library Management System that allows users to 
 
 3.	Functional Requirements:
 * The Library class should have methods to:
-	* AddBook(Book book): Adds a new book to the database.
-	* UpdateBook(int bookId, Book updatedBook): Updates the details of an existing book.
-	* DeleteBook(int bookId): Removes a book from the database.
-	* GetAllBooks(): Retrieves and displays all books.
-	* SearchBooksByTitle(string title): Searches for books by their title.
+	* [C] AddBook(Book book): Adds a new book to the database. [1]
+	* [R] GetAllBooks(): Retrieves and displays all books. [2]
+	* [U] UpdateBook(int bookId, Book updatedBook): Updates the details of an existing book.
+	* [D] DeleteBook(int bookId): Removes a book from the database.
+	* [S] SearchBooksByTitle(string title): Searches for books by their title.
 
 4.	Programming Tasks:
 	* Implement the Book class with properties for Title, Author, PublicationYear, and Genre.
@@ -78,3 +78,4 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## References
 <a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a> C# (CSharp) MySql.Data.MySqlClient MySqlException Examples
+<a href="https://stackoverflow.com/questions/48478323/c-sharp-how-to-set-a-fix-field-width-using-string-interpolation" target="_blank">[2]</a> C# how to set a fix field width using string interpolation

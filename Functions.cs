@@ -69,6 +69,16 @@ namespace Library_Management_System
             library.AddBook(newBook);
         }
 
+        // Function to display all books in Database
+        public static void GetAllBooks(Library library)
+        {
+            Console.WriteLine("--- Display all Books ---");
+            Console.WriteLine("");
+
+            // Display all books
+            library.ViewAllBooks();
+        }
+
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
 
     }
