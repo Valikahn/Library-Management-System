@@ -7,6 +7,9 @@ namespace Library_Management_System
 {
     public class Functions
     {
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
         //--------------------  FUNCTION TO ADD A NEW BOOK  --------------------//
         public static void AddBook(Library library)
         {
@@ -44,7 +47,6 @@ namespace Library_Management_System
 
             Console.Write("Publication Year: ");
             string yearInput = Console.ReadLine();
-            //--------------------  NULLABLE INTEGER FOR OPTIONAL YEAR  --------------------//
             int publicationYear = 0;
             if (!string.IsNullOrWhiteSpace(yearInput))
             {
@@ -61,25 +63,98 @@ namespace Library_Management_System
             }
 
             Console.Write("Genre: ");
-            //--------------------  GET GENRE (OPTIONAL)  --------------------//
+            //--------------------  GET GENRE  --------------------//
             string genre = Console.ReadLine();
 
             //--------------------  CREATE A NEW BOOK OBJECT AND ADD IT TO THE LIBRARY  --------------------//
             Book newBook = new Book(title, authorFirstName, authorLastName, publicationYear, genre);
             library.AddBook(newBook);
         }
-
-        // Function to display all books in Database
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  FUNCTION TO DISPLAY ALL BOOKS IN DATABASE  --------------------//
         public static void GetAllBooks(Library library)
         {
             Console.WriteLine("--- Display all Books ---");
             Console.WriteLine("");
 
-            // Display all books
+            //--------------------  DISPLAY ALL BOOKS IN DATABASE  --------------------//
             library.ViewAllBooks();
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  FUNCTION TO UPDATE BOOK DETAILS  --------------------//
+        public static void UpdateBook(Library library)
+        {
+            Console.WriteLine("--- Update Book Details ---");
+            Console.WriteLine("");
 
+            //--------------------  GET THE BOOK ID TO UPDATE  --------------------//
+            Console.Write("Enter the Book ID to update: ");
+            string idInput = Console.ReadLine();
+            Console.WriteLine("");
+            //--------------------  VALIDATE BOOK  --------------------//
+            if (!int.TryParse(idInput, out int bookId))
+            {
+                Console.WriteLine("Invalid Book ID.");
+                return;
+            }
+
+            //--------------------  GET NEW DETAILS FROM THE USER  --------------------//
+            Console.Write("New Title: ");
+            string title = Console.ReadLine();
+            //--------------------  VALIDATE TITLE  --------------------//
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("Title cannot be empty.");
+                return;
+            }
+
+            Console.Write("New Author First Name: ");
+            string authorFirstName = Console.ReadLine();
+            //--------------------  VALIDATE AUTHOR FIRST NAME  --------------------//
+            if (string.IsNullOrWhiteSpace(authorFirstName))
+            {
+                Console.WriteLine("Author cannot be empty.");
+                return;
+            }
+
+            Console.Write("New Author Last Name: ");
+            string authorLastName = Console.ReadLine();
+            //--------------------  VALIDATE AUTHOR LAST NAME  --------------------//
+            if (string.IsNullOrWhiteSpace(authorLastName))
+            {
+                Console.WriteLine("Author cannot be empty.");
+                return;
+            }
+
+            Console.Write("New Publication Year: ");
+            string yearInput = Console.ReadLine();
+            int publicationYear = 0;
+            if (!string.IsNullOrWhiteSpace(yearInput))
+            {
+                //--------------------  VALIDATE YEAR INPUT  --------------------//
+                if (int.TryParse(yearInput, out int year))
+                {
+                    publicationYear = year;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid year. Please enter a valid integer.");
+                    return;
+                }
+            }
+
+            Console.Write("New Genre: ");
+            //--------------------  GET NEW GENRE (OPTIONAL)  --------------------//
+            string genre = Console.ReadLine();
+
+            //--------------------  UPDATE BOOK OBJECT WITH NEW DATA  --------------------//
+            Book updatedBook = new Book(title, authorFirstName, authorLastName, publicationYear, genre);
+            library.UpdateBook(bookId, updatedBook);
+        }
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
-
     }
 }

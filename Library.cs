@@ -59,7 +59,12 @@ namespace Library_Management_System
 //
 //------------------------------------------------------------------------------------------------------------------------------------------------//
 //
+        //--------------------  UPDATE AN EXISTING BOOK'S DETAILS IN THE LIBRARY  --------------------//
+        public void UpdateBook(int bookId, Book updatedBook)
+        {
+            //--------------------  CALL THE UPDATEBOOK METHOD FROM DATABASEHANDLER  --------------------//
+            dbHandler.UpdateBook(bookId, updatedBook);
+        }
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
-
     }
 }

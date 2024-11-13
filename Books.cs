@@ -26,7 +26,7 @@ namespace Library_Management_System
         //--------------------  GENRE OR CATEGORY OF THE BOOK  --------------------//
         public string Genre { get; set; }
 
-        //--------------------  DEFAULT CONSTRUCTOR (PARAMETERLESS)  --------------------//
+        //--------------------  DEFAULT CONSTRUCTOR  --------------------//
         public Book() { }
 
         //--------------------  PARAMETERISED CONSTRUCTOR TO INITIALISE A BOOK WITH SPECIFIC DETAILS  --------------------//
@@ -38,7 +38,7 @@ namespace Library_Management_System
             AuthorFirstName = authorFirstName;
             //--------------------  ASSIGN THE AUTHOR OF THE BOOK LASTNAME  --------------------//
             AuthorLastName = authorLastName;
-            //--------------------  ASSIGN THE PUBLICATION YEAR (NULLABLE)  --------------------//
+            //--------------------  ASSIGN THE PUBLICATION YEAR  --------------------//
             PublicationYear = publicationYear;
             //--------------------  ASSIGN THE GENRE OF THE BOOK  --------------------//
             Genre = genre;

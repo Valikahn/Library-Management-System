@@ -17,7 +17,9 @@ namespace Library_Management_System
         {
             this.connectionString = connectionString;
         }
-
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
         //--------------------  ADD A NEW BOOK TO THE DATABASE  --------------------//
         public void AddBook(Book book)
         {
@@ -53,7 +55,9 @@ namespace Library_Management_System
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
-
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
         //--------------------  RETRIEVE ALL BOOKS FROM THE DATABASE  --------------------//
         public List<Book> GetAllBooks()
         {
@@ -65,15 +69,15 @@ namespace Library_Management_System
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    // OPEN DATABASE CONNECTION
+                    //--------------------  OPEN DATABASE CONNECTION  --------------------//
                     conn.Open();
-                    // EXECUTE THE QUERY AND GET A READER
+                    //--------------------  EXECUTE THE QUERY AND GET A READER  --------------------//
                     MySqlDataReader reader = cmd.ExecuteReader();
 
-                    // READ ALL ROWS
+                    //--------------------  READ ALL ROWS  --------------------//
                     while (reader.Read())
                     {
-                        // POPULATE A BOOK OBJECT FOR EACH ROW
+                        //--------------------  POPULATE A BOOK OBJECT FOR EACH ROW  --------------------//
                         books.Add(new Book
                         {
                             BookID = reader.GetInt32("BookID"),
@@ -95,11 +99,56 @@ namespace Library_Management_System
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
-            // RETURN THE LIST OF BOOKS
+            //--------------------  RETURN THE LIST OF BOOKS  --------------------//
             return books;
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  UPDATE DETAILS OF AN EXISTING BOOK IN THE DATABASE  --------------------//
+        public void UpdateBook(int bookId, Book updatedBook)
+        {
+            string query = "UPDATE Books SET Title = @Title, AuthorFirstName = @AuthorFirstName, AuthorLastName = @AuthorLastName, PublicationYear = @PublicationYear, Genre = @Genre WHERE BookID = @BookID";
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    //--------------------  MAP UPDATED BOOK DETAILS TO SQL PARAMETERS  --------------------//
+                    cmd.Parameters.AddWithValue("@Title", updatedBook.Title);
+                    cmd.Parameters.AddWithValue("@AuthorFirstName", updatedBook.AuthorFirstName);
+                    cmd.Parameters.AddWithValue("@AuthorLastName", updatedBook.AuthorLastName);
+                    cmd.Parameters.AddWithValue("@PublicationYear", updatedBook.PublicationYear);
+                    cmd.Parameters.AddWithValue("@Genre", updatedBook.Genre);
+                    cmd.Parameters.AddWithValue("@BookID", bookId);
 
+                    //--------------------  OPEN DATABASE CONNECTION  --------------------//
+                    conn.Open();
+                    //--------------------  EXECUTE THE QUERY AND GET AFFECTED ROWS  --------------------//
+                    int rowsAffected = cmd.ExecuteNonQuery(); 
+                    if (rowsAffected == 0)
+                    {
+                        Console.WriteLine("No book found with the given ID.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Book updated successfully.");
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"Database error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
-
     }
 }

@@ -28,7 +28,7 @@ namespace LibraryManagementSystem
                 Console.WriteLine("");
                 Console.WriteLine("1. [C] ADD A NEW BOOK TO THE LIBRARY");
                 Console.WriteLine("2. [R] VIEW ALL BOOKS");
-                //Console.WriteLine("3. [U] UPDATE BOOK DETAILS");
+                Console.WriteLine("3. [U] UPDATE BOOK DETAILS");
                 //Console.WriteLine("4. [D] DELETE A BOOK");
                 //Console.WriteLine("5. [S] SEARCH FOR A BOOK BY TITLE");
                 Console.WriteLine("0. EXIT");
@@ -42,25 +42,27 @@ namespace LibraryManagementSystem
                 //--------------------  HANDLE USER CHOICE USING A SWITCH STATEMENT  --------------------//
                 switch (choice)
                 {
-                    //--------------------  USER CHOOSES TO ADD A BOOK TO THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+                    //--------------------  USER CHOOSES TO [C] ADD A BOOK TO THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
                     case "1" or "c" or "C":
                         Console.Clear();
                         Functions.AddBook(library);
                         break;
-                    //--------------------  USER CHOOSES TO UPDATE A BOOK IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+                    //--------------------  USER CHOOSES TO [R] VIEW ALL BOOKS CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
                     case "2" or "r" or "R":
                         Console.Clear();
                         Functions.GetAllBooks(library);
                         break;
-                    //--------------------  USER CHOOSES TO DELETE A BOOK FROM THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
-                    case "3":
+                    //--------------------  USER CHOOSES TO [U] UPDATE A BOOK IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+                    case "3" or "u" or "U":
                         Console.Clear();
+                        Functions.UpdateBook(library);
                         break;
-                    //--------------------  USER CHOOSES TO VIEW ALL BOOKS CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+                    //--------------------  USER CHOOSES TO [D] DELETE A BOOK FROM THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+
                     case "4":
                         Console.Clear();
                         break;
-                    //--------------------  USER CHOOSES TO SEARCH FOR A BOOK CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
+                    //--------------------  USER CHOOSES TO [S] SEARCH FOR A BOOK CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
                     case "5":
                         Console.Clear();
                         break;
