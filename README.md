@@ -78,4 +78,4 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## References
 <a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a> C# (CSharp) MySql.Data.MySqlClient MySqlException Examples<br />
-<a href="https://stackoverflow.com/questions/48478323/c-sharp-how-to-set-a-fix-field-width-using-string-interpolation" target="_blank">[2]</a> C# how to set a fix field width using string interpolation
+<a href="https://stackoverflow.com/questions/48478323/c-sharp-how-to-set-a-fix-field-width-using-string-interpolation" target="_blank">[2]</a> C# (CSharp) how to set a fix field width using string interpolation
