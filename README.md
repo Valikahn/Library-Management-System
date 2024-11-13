@@ -1,3 +1,10 @@
+﻿﻿<div align="center">
+    <a href="https://github.com/Valikahn/Library-Management-System" target="_blank">
+        <img alt="lamp" src="https://github.com/Valikahn/lamp/blob/master/web/img/lamp_img.png">
+    </a>
+</div>
+
+
 # Library Management System
 
 ### Session 8 - Small C# Project
