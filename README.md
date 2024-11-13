@@ -14,7 +14,7 @@ You are tasked with developing a Library Management System that allows users to 
 1.	Classes: Implement three main classes to model the system:
 * Book: Represents a book in the library.
 * Library: Manages a collection of Book objects and provides methods to add, update, delete, and view books.
-* DatabaseHandler: Handles interactions with the SQL database, including creating tables, connecting to the database, and executing SQL queries.
+* [1] DatabaseHandler: Handles interactions with the SQL database, including creating tables, connecting to the database, and executing SQL queries.
 
 2.	Database:
 * Create an SQL database named LibraryDB.
@@ -70,4 +70,4 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.<br />
 
 ## References
-C# (CSharp) MySql.Data.MySqlClient MySqlException Examples <a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a>
+<a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a> C# (CSharp) MySql.Data.MySqlClient MySqlException Examples
