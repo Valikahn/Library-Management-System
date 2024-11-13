@@ -70,4 +70,4 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.<br />
 
 ## References
-C# (CSharp) MySql.Data.MySqlClient MySqlException Examples <a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html">[1]</a>
+C# (CSharp) MySql.Data.MySqlClient MySqlException Examples <a href="https://csharp.hotexamples.com/examples/MySql.Data.MySqlClient/MySqlException/-/php-mysqlexception-class-examples.html" target="_blank">[1]</a>
