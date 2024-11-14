@@ -41,9 +41,9 @@ You are tasked with developing a Library Management System that allows users to 
 	* [S] SearchBooksByTitle(string title): Searches for books by their title.
 
 4.	Programming Tasks:
-	* Implement the Book class with properties for Title, Author, PublicationYear, and Genre.
-	* In Library, create methods to interact with the DatabaseHandler class and perform CRUD operations.
-	* In DatabaseHandler, create methods to connect to the SQL database, execute SQL commands, and retrieve data.
+* Implement the Book class with properties for Title, Author, PublicationYear, and Genre.
+* In Library, create methods to interact with the DatabaseHandler class and perform CRUD operations.
+* In DatabaseHandler, create methods to connect to the SQL database, execute SQL commands, and retrieve data.
 
 5.	Sample Interaction:
 * When the application runs, display a menu with options to:
