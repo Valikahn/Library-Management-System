@@ -74,6 +74,33 @@ namespace Library_Management_System
             //--------------------  CALL THE DELETEBOOK METHOD FROM DATABASEHANDLER  --------------------//
             dbHandler.DeleteBook(bookId);
         }
-        /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  SEARCH FOR BOOKS BY TITLE AND DISPLAY THE RESULTS  --------------------//
+        public void SearchBooksByTitle(string title)
+        {
+            //--------------------  RETRIEVE THE LIST OF BOOKS MATCHING THE TITLE FROM THE DATABASEHANDLER  --------------------//
+            List<Book> books = dbHandler.SearchBooksByTitle(title);
+
+            //--------------------  IF NO BOOKS ARE FOUND, DISPLAY A MESSAGE AND RETURN  --------------------//
+            if (books.Count == 0)
+            {
+                Console.WriteLine("No books found with the given title.");
+                return;
+            }
+
+            //--------------------  DISPLAY THE SEARCH RESULTS  --------------------//
+            Console.WriteLine("Search Results:");
+            Console.WriteLine("{0,-5} {1,-40} {2,-15} {3,-15} {4,-6} {5,-20}", "ID", "Title", "AuthorFirstName", "AuthorLastName", "Year", "Genre");
+            Console.WriteLine(new string('-', 100));
+
+            //--------------------  ITERATE THROUGH EACH MATCHING BOOK  --------------------//
+            foreach (var book in books) 
+            {
+                //--------------------  PRINT BOOK DETAILS IN A TABULAR FORMAT  --------------------//
+                Console.WriteLine("{0,-5} {1,-40} {2,-15} {3,-15} {4,-6} {5,-20}", book.BookID, book.Title, book.AuthorFirstName, book.AuthorLastName, book.PublicationYear, book.Genre);
+            }
+        }
     }
 }

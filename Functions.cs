@@ -177,7 +177,28 @@ namespace Library_Management_System
             //--------------------  DELETE THE BOOK FROM THE LIBRARY  --------------------//
             library.DeleteBook(bookId);
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  FUNCTION TO SEARCH FOR BOOKS BY TITLE  --------------------//
+        public static void SearchBooks(Library library)
+        {
+            Console.WriteLine("--- Search for a Book by Title ---");
+            Console.WriteLine("");
 
-        /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
+            //--------------------  GET THE TITLE TO SEARCH FOR  --------------------//
+            Console.Write("Enter the title to search for: ");
+            string title = Console.ReadLine();
+
+            //--------------------  VALIDATE TITLE  --------------------//
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("Title cannot be empty.");
+                return;
+            }
+
+            //--------------------  SEARCH FOR BOOKS BY TITLE AND DISPLAY THE RESULTS  --------------------//
+            library.SearchBooksByTitle(title);
+        }
     }
 }

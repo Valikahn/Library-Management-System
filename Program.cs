@@ -30,7 +30,7 @@ namespace LibraryManagementSystem
                 Console.WriteLine("2. [R] VIEW ALL BOOKS");
                 Console.WriteLine("3. [U] UPDATE BOOK DETAILS");
                 Console.WriteLine("4. [D] DELETE A BOOK");
-                //Console.WriteLine("5. [S] SEARCH FOR A BOOK BY TITLE");
+                Console.WriteLine("5. [S] SEARCH FOR A BOOK BY TITLE");
                 Console.WriteLine("0. EXIT");
                 Console.WriteLine("");
                 Console.Write("SELECT AN OPTION USING NUMERICAL VALUES: ");
@@ -66,6 +66,7 @@ namespace LibraryManagementSystem
                     //--------------------  USER CHOOSES TO [S] SEARCH FOR A BOOK CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
                     case "5" or "s" or "S":
                         Console.Clear();
+                        Functions.SearchBooks(library);
                         break;
                     //--------------------  SETS "BOOL (!EXIT)" FLAG TO TRUE ALLOWING THE WHILE LOOP TO EXIT AND THE APPLICATION TO END  --------------------//
                     case "0":

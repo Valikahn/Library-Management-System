@@ -187,7 +187,55 @@ namespace Library_Management_System
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  SEARCH FOR BOOKS BY THEIR TITLE  --------------------//
+        public List<Book> SearchBooksByTitle(string title)
+        {
+            string query = "SELECT * FROM Books WHERE Title LIKE @Title";
+            List<Book> books = new List<Book>();
 
-        /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    //--------------------  USE A WILDCARD SEARCH FOR TITLES  --------------------//
+                    cmd.Parameters.AddWithValue("@Title", $"%{title}%");
+
+                    //--------------------  OPEN DATABASE CONNECTION  --------------------//
+                    conn.Open();
+                    //--------------------  EXECUTE THE QUERY AND GET A READER  --------------------//
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //--------------------  READ ALL ROWS  --------------------//
+                    while (reader.Read()) 
+                    {
+                        //--------------------  POPULATE A BOOK OBJECT FOR EACH MATCHING ROW AND ADD TO THE LIST  --------------------//
+                        books.Add(new Book
+                        {
+                            BookID = reader.GetInt32("BookID"),
+                            Title = reader.GetString("Title"),
+                            AuthorFirstName = reader.GetString("AuthorFirstName"),
+                            AuthorLastName = reader.GetString("AuthorLastName"),
+                            PublicationYear = reader.GetInt32("PublicationYear"),
+                            Genre = reader.GetString("Genre")
+                        });
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"Database error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            //--------------------  RETURN THE LIST OF MATCHING BOOKS  --------------------//
+            return books; 
+        }
     }
 }
