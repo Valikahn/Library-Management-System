@@ -12,7 +12,7 @@ namespace Library_Management_System
         //--------------------  CONNECTION STRING TO THE MYSQL DATABASE  --------------------//
         private string connectionString;
 
-        //--------------------  CONSTRUCTOR TO INITIALISE THE DATABASEHANDLER TO THE CONNECTION STRING  --------------------//
+        //--------------------  CONSTRUCTOR TO INITIALISE THE DATABASEHANDLER WITH THE CONNECTION STRING  --------------------//
         public DatabaseHandler(string connectionString)
         {
             this.connectionString = connectionString;
@@ -71,6 +71,7 @@ namespace Library_Management_System
                 {
                     //--------------------  OPEN DATABASE CONNECTION  --------------------//
                     conn.Open();
+
                     //--------------------  EXECUTE THE QUERY AND GET A READER  --------------------//
                     MySqlDataReader reader = cmd.ExecuteReader();
 

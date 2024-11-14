@@ -29,7 +29,7 @@ namespace Library_Management_System
         //--------------------  DEFAULT CONSTRUCTOR  --------------------//
         public Book() { }
 
-        //--------------------  PARAMETERISED CONSTRUCTOR TO INITIALISE A BOOK WITH SPECIFIC DETAILS  --------------------//
+        //--------------------  PARAMETERISED CONSTRUCTOR  --------------------//
         public Book(string title, string authorFirstName, string authorLastName, int publicationYear, string genre)
         {
             //--------------------  ASSIGN THE TITLE OF THE BOOK  --------------------//

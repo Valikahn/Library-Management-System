@@ -98,7 +98,7 @@ namespace Library_Management_System
             //--------------------  ITERATE THROUGH EACH MATCHING BOOK  --------------------//
             foreach (var book in books) 
             {
-                //--------------------  PRINT BOOK DETAILS IN A TABULAR FORMAT  --------------------//
+                //--------------------  PRINT BOOK DETAILS IN A TAB FORMAT  --------------------//
                 Console.WriteLine("{0,-5} {1,-40} {2,-15} {3,-15} {4,-6} {5,-20}", book.BookID, book.Title, book.AuthorFirstName, book.AuthorLastName, book.PublicationYear, book.Genre);
             }
         }

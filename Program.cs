@@ -13,7 +13,11 @@ namespace LibraryManagementSystem
         static void Main(string[] args)
         {
             //--------------------  CONNECTION STRING TO CONNECT TO THE DATABASE  --------------------//
-            string connectionString = "server=10.11.22.43;port=3306;database=LibraryDB;user=phpMyAdmin;password=Enzc7Sqs8vSviiPx";
+            string connectionString     =   @"server=SERVER_ADDRESS;
+                                            port=PORT_NUMBER;
+                                            database=DATABASE;
+                                            user=USERNAME;
+                                            password=PASSWORD;";
 
             //--------------------  INITIALISE THE DATABASEHANDLER AND LIBRARY WITH THE CONNECTION STRING  --------------------//
             DatabaseHandler dbHandler = new DatabaseHandler(connectionString);
