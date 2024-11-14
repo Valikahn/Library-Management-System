@@ -29,7 +29,7 @@ namespace LibraryManagementSystem
                 Console.WriteLine("1. [C] ADD A NEW BOOK TO THE LIBRARY");
                 Console.WriteLine("2. [R] VIEW ALL BOOKS");
                 Console.WriteLine("3. [U] UPDATE BOOK DETAILS");
-                //Console.WriteLine("4. [D] DELETE A BOOK");
+                Console.WriteLine("4. [D] DELETE A BOOK");
                 //Console.WriteLine("5. [S] SEARCH FOR A BOOK BY TITLE");
                 Console.WriteLine("0. EXIT");
                 Console.WriteLine("");
@@ -59,11 +59,12 @@ namespace LibraryManagementSystem
                         break;
                     //--------------------  USER CHOOSES TO [D] DELETE A BOOK FROM THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
 
-                    case "4":
+                    case "4" or "d" or "D":
                         Console.Clear();
+                        Functions.DeleteBook(library);
                         break;
                     //--------------------  USER CHOOSES TO [S] SEARCH FOR A BOOK CURRENTLY IN THE DATABASE WITH THIS SWITCHCASE FUNCTION  --------------------//
-                    case "5":
+                    case "5" or "s" or "S":
                         Console.Clear();
                         break;
                     //--------------------  SETS "BOOL (!EXIT)" FLAG TO TRUE ALLOWING THE WHILE LOOP TO EXIT AND THE APPLICATION TO END  --------------------//

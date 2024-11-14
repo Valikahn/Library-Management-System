@@ -149,6 +149,45 @@ namespace Library_Management_System
 //
 //------------------------------------------------------------------------------------------------------------------------------------------------//
 //
+        //--------------------  DELETE A BOOK FROM THE DATABASE  --------------------//
+        public void DeleteBook(int bookId)
+        {
+            string query = "DELETE FROM Books WHERE BookID = @BookID";
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    //--------------------  MAP BOOK ID TO SQL PARAMETER  --------------------//
+                    cmd.Parameters.AddWithValue("@BookID", bookId);
+
+                    //--------------------  OPEN DATABASE CONNECTION  --------------------//
+                    conn.Open();
+                    //--------------------  EXECUTE THE QUERY  --------------------//
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected == 0)
+                    {
+                        Console.WriteLine("No book found with the given ID.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Book deleted successfully...  Please Wait...");
+                        Thread.Sleep(5000);
+                        Console.Clear();
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"Database error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
     }
 }

@@ -65,6 +65,15 @@ namespace Library_Management_System
             //--------------------  CALL THE UPDATEBOOK METHOD FROM DATABASEHANDLER  --------------------//
             dbHandler.UpdateBook(bookId, updatedBook);
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  DELETE A BOOK FROM THE LIBRARY BY ITS ID  --------------------//
+        public void DeleteBook(int bookId)
+        {
+            //--------------------  CALL THE DELETEBOOK METHOD FROM DATABASEHANDLER  --------------------//
+            dbHandler.DeleteBook(bookId);
+        }
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
     }
 }

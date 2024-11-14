@@ -155,6 +155,29 @@ namespace Library_Management_System
             Book updatedBook = new Book(title, authorFirstName, authorLastName, publicationYear, genre);
             library.UpdateBook(bookId, updatedBook);
         }
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+//
+        //--------------------  FUNCTION TO DELETE A BOOK  --------------------//
+        public static void DeleteBook(Library library)
+        {
+            Console.WriteLine("--- Delete a Book ---");
+            Console.WriteLine("");
+            //--------------------  GET THE BOOK ID TO DELETE  --------------------//
+            Console.Write("Enter the Book ID to delete: ");
+            string idInput = Console.ReadLine();
+
+            //--------------------  VALIDATE BOOK ID  --------------------//
+            if (!int.TryParse(idInput, out int bookId))
+            {
+                Console.WriteLine("Invalid Book ID.");
+                return;
+            }
+
+            //--------------------  DELETE THE BOOK FROM THE LIBRARY  --------------------//
+            library.DeleteBook(bookId);
+        }
+
         /////////////////////////////////////////////////////////////    INSERT HERE    /////////////////////////////////////////////////////////////
     }
 }
